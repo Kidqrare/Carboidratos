@@ -93,3 +93,18 @@ section a {
 section a:hover {
     text-decoration: underline;
 }
+
+/* fonte colorida */
+p1, p1::after {
+  margin: 0;
+  font-size: 1em;
+  background: linear-gradient(90deg in lch longer hue, oklch(105% 90% 0) 0 0);
+  background-size: 500% 100%;
+  animation: blend 30s infinite linear;
+  color: transparent;
+  background-clip: text;
+}
+
+@keyframes blend {
+  to { background-position: 500% 100%; }
+}
