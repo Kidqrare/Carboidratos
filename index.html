@@ -4,20 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carboidratos: Energia para a Vida</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Media Query para telas menores (responsividade básica) */
-        
-        @media (max-width: 600px) {
-            nav ul {
-                text-align: left; /* Alinha os itens do menu à esquerda em telas pequenas */
-            }
-            nav li {
-                display: block; /* Coloca os itens do menu em linhas separadas */
-                margin: 5px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="carboidratos.css">
 </head>
 <body>
 
@@ -26,23 +13,49 @@
         <p>Um guia completo sobre o que são, como funcionam e sua importância na alimentação.</p>
     </header>
 
-    <nav>
+    <script src="carboidratos.js"></script>
+
+    <nav class="nav-bar"></nav>
+    <div class="nav-list">
         <ul>
-            <li><a href="#capa">Capa</a></li>
-            <li><a href="#sumario">Sumário</a></li>
-            <li><a href="#introducao">Introdução</a></li>
-            <li><a href="#tipos">Tipos de Carboidratos</a></li>
-            <li><a href="#funcoes">Funções no Organismo</a></li>
-            <li><a href="#fontes">Fontes Alimentares</a></li>
-            <li><a href="#metabolismo">Metabolismo dos Carboidratos</a></li>
-            <li><a href="#impacto">Impacto na Saúde</a></li>
-            <li><a href="#dietas">Carboidratos e Dietas</a></li>
-            <li><a href="#Pirâmide">Pirâmide alimentar</a></li>
-            <li><a href="#conclusao">Considerações Finais</a></li>
-            <li><a href="#referencias">Referências Bibliográficas</a></li>
-            <li><a href="#FeitoPor">Desenvolvedores</a></li>
+            <li class="nav-item"><a class="nav-link" href="#capa">Capa</a></li>
+            <li class="nav-item"><a href="#sumario">Sumário</a></li>
+            <li class="nav-item"><a href="#introducao">Introdução</a></li>
+            <li class="nav-item"><a href="#tipos">Tipos de Carboidratos</a></li>
+            <li class="nav-item"><a href="#funcoes">Funções no Organismo</a></li>
+            <li class="nav-item"><a href="#fontes">Fontes Alimentares</a></li>
+            <li class="nav-item"><a href="#metabolismo">Metabolismo dos Carboidratos</a></li>
+            <li class="nav-item"><a href="#impacto">Impacto na Saúde</a></li>
+            <li class="nav-item"><a href="#dietas">Carboidratos e Dietas</a></li>
+            <li class="nav-item"><a href="#desenvolvimento">Desenvolvimento</a></li>
+            <li class="nav-item"><a href="#conclusao">Considerações Finais</a></li>
+            <li class="nav-item"><a href="#referencias">Referências Bibliográficas</a></li>
         </ul>
-    </nav>
+    </div>
+    <div class="mobile-menu-icon">
+        <label class="burger" for="burger">
+            <input onclick="menuShow()" type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#capa">Capa</a></li>
+            <li class="nav-item"><a href="#sumario">Sumário</a></li>
+            <li class="nav-item"><a href="#introducao">Introdução</a></li>
+            <li class="nav-item"><a href="#tipos">Tipos de Carboidratos</a></li>
+            <li class="nav-item"><a href="#funcoes">Funções no Organismo</a></li>
+            <li class="nav-item"><a href="#fontes">Fontes Alimentares</a></li>
+            <li class="nav-item"><a href="#metabolismo">Metabolismo dos Carboidratos</a></li>
+            <li class="nav-item"><a href="#impacto">Impacto na Saúde</a></li>
+            <li class="nav-item"><a href="#dietas">Carboidratos e Dietas</a></li>
+            <li class="nav-item"><a href="#desenvolvimento">Desenvolvimento</a></li>
+            <li class="nav-item"><a href="#conclusao">Considerações Finais</a></li>
+            <li class="nav-item"><a href="#referencias">Referências Bibliográficas</a></li>
+        </ul>
+    </div>
 
     <main>
         <section id="capa">
