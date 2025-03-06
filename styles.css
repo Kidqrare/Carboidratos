@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
@@ -94,17 +98,155 @@ section a:hover {
     text-decoration: underline;
 }
 
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.show{
+    display: block;
+    opacity: 1;
+}
+
+/* From Uiverse.io by Cevorob */ 
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar {
+    padding: 1.5rem 4rem;
+}
+
+.nav-item {
+    display: none;
+}
+
+.mobile-menu-icon{
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+}
+
+.mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.mobile-menu .nav-item {
+    display: block;
+    padding-top: 1.2rem;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.open {
+    display: block;
+    width: 100%;
+    margin-top: -8px;
+    background-color: lightgray;
+}
+
 /* fonte colorida */
-p1, p1::after {
-  margin: 0;
-  font-size: 1em;
-  background: linear-gradient(90deg in lch longer hue, oklch(105% 90% 0) 0 0);
-  background-size: 500% 100%;
-  animation: blend 30s infinite linear;
-  color: transparent;
-  background-clip: text;
+p1,
+p1::after {
+    margin: 0;
+    font-size: 1em;
+    background: linear-gradient(90deg in lch longer hue, oklch(105% 90% 0) 0 0);
+    background-size: 500% 100%;
+    animation: blend 30s infinite linear;
+    color: transparent;
+    background-clip: text;
 }
 
 @keyframes blend {
-  to { background-position: 500% 100%; }
+    to {
+        background-position: 500% 100%;
+    }
+}
+
+/* Media Query para telas menores (responsividade básica) */
+
+@media (max-width: 600px) {
+    nav ul {
+        text-align: left;
+        /* Alinha os itens do menu à esquerda em telas pequenas */
+    }
+
+    nav li {
+        display: block;
+        /* Coloca os itens do menu em linhas separadas */
+        margin: 5px 0;
+    }
 }
